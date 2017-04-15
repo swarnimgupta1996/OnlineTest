@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+     
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <style>
+	  ul.one {
+    list-style-type: none;
+    margin: -10px 0 0 0;
+    padding: 0;
+    width: 180px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+    border: 1px solid #555;
+	
+}
+
+li.item a {
+    display: block;
+    color: #000;
+    padding: 60px 46px;
+    text-decoration: none;
+}
+
+li.item {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li.item:last-child {
+    border-bottom: none;
+}
+
+li.item a.active {
+    background-color: grey;
+    color: white;
+}
+
+li.item a:hover:not(.active) {
+    background-color: grey;
+    color: white;
+}
+  #logout{
+  margin-top:50px;
+  margin-left:820px;}
+  #Q1,#Q2,#Q3,#Q4,#Q5,#Q6,#Q7,#Q8,#Q9
+  {
+    width:590px;
+	margin-left:190px;
+	margin-top:-420px;
+	position:absolute;
+	height:400px;
+	top:0;
+	left:0;
+	}
+	   #omr{
+	   margin-top:-840px;
+  margin-left:779px;}
+  #p,#n,#c,#f
+  {
+  margin-top:-890px; 
+  }
+  #Q1{
+  z-index:1;
+  
+  }
+  #Q2{
+  z-index:2;
+  
+  }
+  #Q3{
+  z-index:3;
+  
+  }
+  #Q4{
+  z-index:4;
+
+  }
+  #Q5{
+  z-index:5;
+   
+  }
+  #Q6{
+  z-index:6;
+   
+  }
+  #Q7{
+  z-index:7;
+   
+  }
+  #Q8{
+  z-index:9;
+   
+  }
+  #Q9{
+  z-index:9;
+   
+  }
+  .questions
+  {
+  height:400px;
+  position:relative;
+  }
+  body
+  {
+  background-color:#ffcdd2;
+  font-family: 'Pacifico', cursive;
+  }
+	
+	  </style>
+	  <script>
+	  var pages = ["empty","Q1", "Q2", "Q3","Q4","Q5","Q6","Q7","Q8","Q9"];
+  var pg=1;
+
+ $(document).ready(function()
+ {
+ $("#phy").click(function(){    $("#"+ pages[pg]).hide();$("#"+ pages[1]).show(); pg=1;    
+ $("#phy").addClass("active");
+ $("#chem").removeClass("active");
+ $("#maths").removeClass("active");
+ });
+$("#maths").click(function(){    $("#"+ pages[pg]).hide();$("#"+ pages[7]).show(); pg=7;    
+$("#maths").addClass("active");
+$("#phy").removeClass("active");
+$("#chem").removeClass("active");
+
+      });
+$("#chem").click(function(){    $("#"+ pages[pg]).hide();$("#"+ pages[4]).show(); pg=4;   
+$("#chem").addClass("active");
+$("#phy").removeClass("active");
+ $("#maths").removeClass("active");
+       });
+ $("#p").click(function(){if(pg>1) {$("#"+ pages[pg]).hide();$("#"+ pages[--pg]).show();}});
+  $("#n").click(function(){if(pg<9) {$("#"+ pages[pg]).hide();$("#"+ pages[++pg]).show();}});
+    $("#c").click(function(){
+   if(pg==1)
+   { $("input:radio[name='group1']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g1']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==2)
+   { $("input:radio[name='group2']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g2']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==3)
+   { $("input:radio[name='group3']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g3']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==4)
+   { $("input:radio[name='group4']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g4']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==5)
+   { $("input:radio[name='group5']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g5']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==6)
+   { $("input:radio[name='group6']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g6']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==7)
+   { $("input:radio[name='group7']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g7']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==8)
+   { $("input:radio[name='group8']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g8']").each(function (i) {        
+        this.checked = false;});
+    }
+	if(pg==9)
+   { $("input:radio[name='group9']").each(function (i) {        
+        this.checked = false;});
+		$("input:radio[name='g9']").each(function (i) {        
+        this.checked = false;});
+    }
+	});
+//...q1------------
+	$("input:radio[name='group1']").change(function()
+	{
+
+ var v = $("input[name='group1']:checked").val();
+        
+ 
+     $("input[name='g1'][value= " + v + "]").prop('checked', 'true');   
+  
+});
+//----q2
+	$("input:radio[name='group2']").change(function()
+	{
+ var v = $("input[name='group2']:checked").val();
+
+     $("input[name='g2'][value= " + v + "]").prop('checked', 'true');   
+  
+});
+//----q3
+	$("input:radio[name='group3']").change(function()
+	{
+ var v = $("input[name='group3']:checked").val();
+     $("input[name='g3'][value= " + v + "]").prop('checked', 'true');   
+  
+});
+//----q4
+$("input:radio[name='group4']").change(function()
+	{
+ var v = $("input[name='group4']:checked").val();
+     $("input[name='g4'][value= " + v + "]").prop('checked', 'true');   
+});
+//----q5
+$("input:radio[name='group5']").change(function()
+	{
+ var v = $("input[name='group5']:checked").val();
+     $("input[name='g5'][value= " + v + "]").prop('checked', 'true');   
+});
+//----q6
+$("input:radio[name='group6']").change(function()
+	{
+ var v = $("input[name='group6']:checked").val();
+     $("input[name='g6'][value= " + v + "]").prop('checked', 'true');   
+});
+//----q7
+$("input:radio[name='group7']").change(function()
+	{
+ var v = $("input[name='group7']:checked").val();
+     $("input[name='g7'][value= " + v + "]").prop('checked', 'true');   
+});
+//----q8
+$("input:radio[name='group8']").change(function()
+	{
+ var v = $("input[name='group8']:checked").val();
+     $("input[name='g8'][value= " + v + "]").prop('checked', 'true');   
+});
+//----q9
+$("input:radio[name='group9']").change(function()
+	{
+ var v = $("input[name='group9']:checked").val();
+     $("input[name='g9'][value= " + v + "]").prop('checked', 'true');   
+});
+//-------review checkbox
+    $('#cb1').change(function() {
+	 
+        if($(this).is(":checked"))
+		{
+      $(".qno1").css("background-color", "red");
+	  $("label[for = cb1]").text("marked");}
+	  else
+	  {$("label[for = cb1]").text("Mark for review");
+      $(".qno1").css("background-color", "#bbdefb");}
+    });
+	$('#cb2').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno2").css("background-color", "red");
+	  $("label[for = cb2]").text("marked");}
+	  else
+	  {$("label[for = cb2]").text("Mark for review");
+      $(".qno2").css("background-color", "#bbdefb");}
+    });
+	$('#cb3').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno3").css("background-color", "red");
+	  $("label[for = cb3]").text("marked");}
+	  else
+	  {$("label[for = cb3]").text("Mark for review");
+      $(".qno3").css("background-color", "#bbdefb");}
+    });
+	$('#cb4').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno4").css("background-color", "red");
+	  $("label[for = cb4]").text("marked");}
+	  else
+	  {$("label[for = cb4]").text("Mark for review");
+      $(".qno4").css("background-color", "#bbdefb");}
+    });
+	$('#cb5').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno5").css("background-color", "red");
+	  $("label[for = cb5]").text("marked");}
+	  else
+	  {$("label[for = cb5]").text("Mark for review");
+      $(".qno5").css("background-color", "#bbdefb");}
+    });
+	$('#cb6').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno6").css("background-color", "red");
+	  $("label[for = cb6]").text("marked");}
+	  else
+	  {$("label[for = cb6]").text("Mark for review");
+      $(".qno6").css("background-color", "#bbdefb");}
+    });
+	$('#cb7').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno7").css("background-color", "red");
+	  $("label[for = cb7]").text("marked");}
+	  else
+	  {$("label[for = cb7]").text("Mark for review");
+      $(".qno7").css("background-color", "#bbdefb");}
+    });
+	$('#cb8').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno8").css("background-color", "red");
+	  $("label[for = cb8]").text("marked");}
+	  else
+	  {$("label[for = cb8]").text("Mark for review");
+      $(".qno8").css("background-color", "#bbdefb");}
+    });
+	$('#cb9').change(function() 
+	{
+        if($(this).is(":checked"))
+		{
+      $(".qno9").css("background-color", "red");
+	  $("label[for = cb9]").text("marked");}
+	  else
+	  {$("label[for = cb9]").text("Mark for review");
+      $(".qno9").css("background-color", "#bbdefb");}
+    });
+//..................
+
+ });
+ var Timer;
+var TotalSeconds;
+
+function CreateTimer(TimerID, Time) 
+{
+    Timer = document.getElementById(TimerID);
+    TotalSeconds = Time;
+    UpdateTimer()
+    window.setTimeout("Tick()", 1000);
+}
+
+function Tick() 
+{
+    TotalSeconds -= 1;
+    if(TotalSeconds ==-1)
+      {
+    alert("Time Up !thankyou");
+	document.getElementById("f").click(); //finish button
+   
+      }
+   else
+     {
+    UpdateTimer()
+    window.setTimeout("Tick()", 1000);
+     }
+}
+
+
+function UpdateTimer() {
+     var Seconds = TotalSeconds;
+
+        var Days = Math.floor(Seconds / 86400);
+    Seconds -= Days * 86400;
+
+   var Hours = Math.floor(Seconds / 3600);
+           Seconds -= Hours * (3600);
+ 
+ var Minutes = Math.floor(Seconds / 60);
+    Seconds -= Minutes * (60);
+
+
+    var TimeStr = ((Days > 0) ? Days + " days " : "") + LeadingZero(Hours) + ":" + LeadingZero(Minutes) + ":" + LeadingZero(Seconds)
+
+
+   Timer.innerHTML = TimeStr;
+ }
+
+
+ function LeadingZero(Time) {
+
+ return (Time < 10) ? "0" + Time : + Time;
+
+  }
+
+
+ 
+  </script>
+	  
+	  
+	 
+	  </head>
+	  <body>
+	   <div class=container>
+	   
+	   <span style ="margin-top:30px;"><a class="waves-effect waves-light btn" id="logout" href="loginpage.html">LOGOUT</a></span>
+   <label  for="logout" style ="margin-left:845px;width:130px;color:red;font-size:18px;" >swarnim</label>
+    <img src= "as.png" alt="logo" width="240px" height="270px" style ="margin-top:-180px"> </img>
+<!---timer-->
+   <div style="margin-left:600px;margin-top:-60px;"><span id='timer' style="color:red;"></span> </div>
+<script type="text/javascript">window.onload = CreateTimer("timer", 3600);</script>  
+  <ul class="one">
+  <li class="item"><a class="active" id="phy">Physics</a></li>
+  <li class="item"><a id="chem">Chemistry </a></li>
+  <li class="item"><a id="maths">Maths</a></li>
+   </ul>
+   
+   
+   <!-- ---Q1-- -->
+   <div class="questions">
+<div class="row">
+        <div class="col s12 m12 panel active" id="Q1" >
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+     <input type="checkbox" id="cb1" />
+      <label for="cb1">  Mark for review</label>
+	  </br></br>
+              <p> Q1.
+              where is Taj mahal?.............</p>
+            </div>
+            <div class="card-action">
+			<form action="#" id="form1" >
+    <p style="color:blue;">
+      <input name="group1" type="radio" id="test1" value= "1" />
+      <label for="test1">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group1" type="radio" id="test2" value="2" />
+      <label for="test2">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group1" type="radio" id="test3" value= "3"  />
+      <label for="test3">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group1" type="radio" id="test4" value="4" />
+        <label for="test4">Japan</label>
+    </p>
+	
+  </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+	   
+	   
+	   <div class="row">
+        <div class="col s12 m12 panel" id="Q2" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb2" />
+      <label for="cb2">  Mark for review</label>
+	  </br></br>
+              <p> Q2.
+              ......???.............</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group2" type="radio" id="test5"  value= "1"/>
+      <label for="test5">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group2" type="radio" id="test6" value= "2"/>
+      <label for="test6">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group2" type="radio" id="test7" value= "3" />
+      <label for="test7">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group2" type="radio" id="test8" value= "4" />
+        <label for="test8">Japan</label>
+    </p>
+	
+  </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+	  
+	  
+	  <div class="row">
+        <div class="col s12 m12 panel" id="Q3" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb3" />
+      <label for="cb3">  Mark for review</label>
+	  </br></br>
+              <p> Q3.
+              ..........................</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group3" type="radio" id="test9" value= "1" />
+      <label for="test9">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group3" type="radio" id="test10" value= "2" />
+      <label for="test10">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group3" type="radio" id="test11"  value= "3"/>
+      <label for="test11">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group3" type="radio" id="test12" value= "4" />
+        <label for="test12">Japan</label>
+    </p>
+  </form>
+  </div>
+     </div>
+        </div>
+         </div>
+	  
+	  <!--   question 4 -->
+	  <div class="row">
+        <div class="col s12 m12 panel" id="Q4" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb4" />
+      <label for="cb4">  Mark for review</label>
+	  </br></br>
+              <p> Q4.
+            .....................</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group4" type="radio" id="test13" value= "1" />
+      <label for="test13">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group4" type="radio" id="test14"  value= "2" />
+      <label for="test14">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group4" type="radio" id="test15" value= "3" />
+      <label for="test15">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group4" type="radio" id="test16" value= "4"  />
+        <label for="test16">Japan</label>
+    </p>
+  </form>
+  </div>
+     </div>
+        </div>
+         </div>
+	  <!--   question 5 -->
+	  <div class="row">
+        <div class="col s12 m12 panel" id="Q5" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb5" />
+      <label for="cb5">  Mark for review</label>
+	  </br></br>
+              <p> Q5.
+            .....................</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group5" type="radio" id="test17" value= "1" />
+      <label for="test17">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group5" type="radio" id="test18" value= "2" />
+      <label for="test18">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group5" type="radio" id="test19" value= "3"/>
+      <label for="test19">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group5" type="radio" id="test20"  value= "4"/>
+        <label for="test20">Japan</label>
+    </p>
+  </form>
+  </div>
+     </div>
+        </div>
+         </div>
+	  <!--   question 6 -->
+	  <div class="row">
+        <div class="col s12 m12 panel" id="Q6" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb6" />
+      <label for="cb6">  Mark for review</label>
+	  </br></br>
+              <p> Q6.
+            .....................</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group6" type="radio" id="test21" value= "1" />
+      <label for="test21">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group6" type="radio" id="test22" value= "2" />
+      <label for="test22">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group6" type="radio" id="test23" value= "3"/>
+      <label for="test23">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group6" type="radio" id="test24" value= "4" />
+        <label for="test24">Japan</label>
+    </p>
+  </form>
+  </div>
+     </div>
+        </div>
+         </div>
+	  <!--   question 7 -->
+	  <div class="row">
+        <div class="col s12 m12 panel" id="Q7" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb7" />
+      <label for="cb7">  Mark for review</label>
+	  </br></br>
+              <p> Q7.
+            .....................</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group7" type="radio" id="test25" value= "1" />
+      <label for="test25">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group7" type="radio" id="test26"  value= "2"/>
+      <label for="test26">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group7" type="radio" id="test27"  value= "3"/>
+      <label for="test27">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group7" type="radio" id="test28"  value= "4"/>
+        <label for="test28">Japan</label>
+    </p>
+  </form>
+  </div>
+     </div>
+        </div>
+         </div>
+	  <!--   question 8 -->
+	  	  <div class="row">
+        <div class="col s12 m12 panel" id="Q8" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb8" />
+      <label for="cb8">  Mark for review</label>
+	  </br></br>
+              <p> Q8
+            .....................</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group8" type="radio" id="test29" value= "1" />
+      <label for="test29">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group8" type="radio" id="test30"   value= "2"/>
+      <label for="test30">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group8" type="radio" id="test31" value= "3" />
+      <label for="test31">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group8" type="radio" id="test32" value= "4" />
+        <label for="test32">Japan</label>
+    </p>
+  </form>
+  </div>
+     </div>
+        </div>
+         </div>
+	  
+	  <!--   question 9 -->
+	  	  <div class="row">
+        <div class="col s12 m12 panel" id="Q9" style="display:none;">
+          <div class="card orange lighten-3">
+            <div class="card-content black-text">
+    <input type="checkbox" id="cb9" />
+      <label for="cb9">  Mark for review</label>
+	  </br></br>
+              <p> Q9.
+            .....................</p>
+            </div>
+            <div class="card-action">
+			<form action="#" >
+    <p style="color:blue;">
+      <input name="group9" type="radio" id="test33"  value= "1"/>
+      <label for="test33">US</label>
+    </p>
+    <p style="color:black;">
+      <input name="group9" type="radio" id="test34" value= "2" />
+      <label for="test34">UK</label>
+    </p>
+    <p style="color:black;">
+      <input  name="group9" type="radio" id="test35"  value= "3"/>
+      <label for="test35">India</label>
+    </p>
+      <p style="color:black;">
+        <input name="group9" type="radio" id="test36"  value= "4"/>
+        <label for="test36">Japan</label>
+    </p>
+  </form>
+  </div>
+     </div>
+        </div>
+         </div>
+   
+	   </div>
+	   
+	   
+	  <!----- Questions end --> 
+	  
+	  <div class="row">
+      <div class="col s12 m5 ">
+        <div class="card-panel blue lighten-4" style="width:210px;" id="omr">
+          <span class="white-text">
+		  <form  action="#" >
+    <p style="color:blue;">
+	   <span class="qno1">1</span>
+      <input name="g1" type="radio"  disabled="disabled" id="t1" value= "1" />
+      <label for="t1"> </label>
+
+    
+      <input name="g1" type="radio" disabled="disabled" id="t2" value= "2"/>
+      <label for="t2"> </label>
+
+      <input  name="g1" type="radio" disabled="disabled" id="t3" value= "3" />
+      <label for="t3"> </label>
+
+
+        <input name="g1" type="radio" disabled="disabled" id="t4" value= "4" />
+        <label for="t4">  </label>
+    </p>
+	  </form>
+	  <form  action="#" >
+	<p style="color:blue;">
+	   <span class="qno2">2</span>
+      <input name="g2" type="radio"  disabled="disabled" id="t5" value= "1" />
+      <label for="t5"> </label>
+
+    
+      <input name="g2" type="radio" disabled="disabled" id="t6" value= "2"/>
+      <label for="t6"> </label>
+
+      <input  name="g2" type="radio" disabled="disabled" id="t7" value= "3" />
+      <label for="t7"> </label>
+
+
+        <input name="g2" type="radio" disabled="disabled" id="t8" value= "4" />
+        <label for="t8">  </label>
+    </p>
+	   </form>
+	<p style="color:blue;">
+	   <span class="qno3">3</span>
+      <input name="g3" type="radio"  disabled="disabled" id="t9" value= "1" />
+      <label for="t9"> </label>
+
+    
+      <input name="g3" type="radio" disabled="disabled" id="t10" value= "2"/>
+      <label for="t10"> </label>
+
+      <input  name="g3" type="radio" disabled="disabled" id="t11" value= "3" />
+      <label for="t11"> </label>
+
+
+        <input name="g3" type="radio" disabled="disabled" id="t12" value= "4" />
+        <label for="t12">  </label>
+    </p>
+	<p style="color:blue;">
+	   <span class="qno4">4</span>
+      <input name="g4" type="radio"  disabled="disabled" id="t13" value= "1" />
+      <label for="t13"> </label>
+
+    
+      <input name="g4" type="radio" disabled="disabled" id="t14" value= "2"/>
+      <label for="t14"> </label>
+
+      <input  name="g4" type="radio" disabled="disabled" id="t15" value= "3" />
+      <label for="t15"> </label>
+
+
+        <input name="g4" type="radio" disabled="disabled" id="t16" value= "4" />
+        <label for="t16">  </label>
+    </p>
+	<p style="color:blue;">
+	   <span class="qno5">5</span>
+      <input name="g5" type="radio"  disabled="disabled" id="t17" value= "1" />
+      <label for="t17"> </label>
+
+    
+      <input name="g5" type="radio" disabled="disabled" id="t18" value= "2"/>
+      <label for="t18"> </label>
+
+      <input  name="g5" type="radio" disabled="disabled" id="t19" value= "3" />
+      <label for="t19"> </label>
+
+
+        <input name="g5" type="radio" disabled="disabled" id="t20" value= "4" />
+        <label for="t20">  </label>
+    </p>
+	<p style="color:blue;">
+	   <span class="qno6">6</span>
+      <input name="g6" type="radio"  disabled="disabled" id="t21" value= "1" />
+      <label for="t21"> </label>
+
+    
+      <input name="g6" type="radio" disabled="disabled" id="t22" value= "2"/>
+      <label for="t22"> </label>
+
+      <input  name="g6" type="radio" disabled="disabled" id="t23" value= "3" />
+      <label for="t23"> </label>
+
+
+        <input name="g6" type="radio" disabled="disabled" id="t24" value= "4" />
+        <label for="t24">  </label>
+    </p>
+	<p style="color:blue;">
+	   <span class="qno7">7</span>
+      <input name="g7" type="radio"  disabled="disabled" id="t25" value= "1" />
+      <label for="t25"> </label>
+
+    
+      <input name="g7" type="radio" disabled="disabled" id="t26" value= "2"/>
+      <label for="t26"> </label>
+
+      <input  name="g7" type="radio" disabled="disabled" id="t27" value= "3" />
+      <label for="t27"> </label>
+
+
+        <input name="g7" type="radio" disabled="disabled" id="t28" value= "4" />
+        <label for="t28">  </label>
+    </p>
+	<p style="color:blue;">
+	   <span class="qno8">8</span>
+      <input name="g8" type="radio"  disabled="disabled" id="t29" value= "1" />
+      <label for="t29"> </label>
+
+    
+      <input name="g8" type="radio" disabled="disabled" id="t30" value= "2"/>
+      <label for="t30"> </label>
+
+      <input  name="g8" type="radio" disabled="disabled" id="t31" value= "3" />
+      <label for="t31"> </label>
+
+
+        <input name="g8" type="radio" disabled="disabled" id="t32" value= "4" />
+        <label for="t32">  </label>
+    </p>
+	<p style="color:blue;">
+	   <span class="qno9">9</span>
+      <input name="g9" type="radio"  disabled="disabled" id="t33" value= "1" />
+      <label for="t33"> </label>
+
+    
+      <input name="g9" type="radio" disabled="disabled" id="t34" value= "2"/>
+      <label for="t34"> </label>
+
+      <input  name="g9" type="radio" disabled="disabled" id="t35" value= "3" />
+      <label for="t35"> </label>
+
+
+        <input name="g9" type="radio" disabled="disabled" id="t36" value= "4" />
+        <label for="t36">  </label>
+    </p>
+  </form>
+		  
+		  
+          </span>
+        </div>
+      </div>
+    </div>
+	  
+	  <!--OMR ends>
+	  <!--   buttons  -->
+	  <a style="margin-left:300px;" class="waves-effect waves-light btn " id="p">Previous</a>
+	 <a  class="waves-effect waves-light btn "  id="n">Next</a>
+	 <a  class="waves-effect waves-light btn "  id="c">Clear</a>
+       <a class="btn-floating btn-large waves-effect waves-light red" style="font-size:12px;"id="f" href="home.html">Finish</a>
+	  
+
+	  </div>
+	  
+	  
+	  
+	  
+	  </body>
+	  </html>

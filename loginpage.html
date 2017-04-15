@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+   
+     <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+          
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </head>
+	
+
+      <style>
+	  body
+	  {
+		  background-image:url("http://orig05.deviantart.net/7249/f/2007/185/5/7/wood_wallpaper_by_stenosis.jpg");
+background-repeat: no-repeat;
+background-attachment:fixed;
+    background-size: cover;
+	  }
+	  .pic
+	  {
+	  margin-left:-50px;
+
+	  }
+	  
+	  </style>
+	  <script>
+	  function  validate()
+{
+if(document.MyForm.username.value !="swarnim")
+{
+alert("wrong username");
+document.MyForm.username.focus();
+return false;
+}
+if(document.MyForm.password.value != "pass")
+{
+alert("wrong password");
+document.MyForm.password.focus();
+return false;
+}
+}
+	  </script>
+    </head>
+    <body>
+     <div class="container">
+    <div class = "logi">
+	 <div class="row ">
+	 <div class= "pic">
+	<div class="col s6 offset-s3 m4 offset-m3 l3 offset-l3 ">
+    <img src= "as.png" alt="swarnim gupta" width="230px" height="290px" ></img>
+    </div>
+	</div>
+	</div>
+   <div class="row">
+    <form class="col s12" name = "MyForm" >
+      <div class="row">
+        <div class="input-field col s6 offset-s3 m4 offset-m3 l3 offset-l3"> 
+         <label for="username" style="color:#000000">Username</label>
+          <input placeholder="Enter username" id="username" type="text" class="validate">
+         
+        </div>
+      </div>
+     </br></br>
+      <div class="row">
+        <div class="input-field col  s6 offset-s3 m4 offset-m3 l3 offset-l3">
+          <label for="password" style="color:#000000">Password</label>
+          <input  placeholder="Enter password" id="password" type="password" class="validate">
+        </div>
+		</div>
+		<div class="row">
+        <div class= " col s6 offset-s3 m4 offset-m3 l3 offset-l3">
+        <a class="waves-effect waves-light btn" onclick = "return(validate()) ;" href="home.html">LOGIN</a>
+      </div>
+      </div>
+      
+       </div>
+    </form>
+  </div>
+        </div>
+    
+    
+    </body>
+  </html>
+        

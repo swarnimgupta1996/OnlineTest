@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+     <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+          
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+   
+	<style>
+	
+	#info{
+	text-align:center;
+	font-family: 'Pacifico', cursive;
+	}
+	nav
+	{
+	height:130px;
+	font-family: 'Pacifico', cursive;
+	font-size: 120px;
+	
+	}
+	#nav1
+	{text-align:center;
+	}
+	span{
+	color:red;
+	}
+	li a{
+	width:170px;
+	color:blue;}
+	
+	.button-0 {
+ 
+    padding: 10px 38px;
+    
+    
+    border-radius: 10px;
+    font-family: 'Helvetica', cursive;
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: none;  
+    background-color: #3498DB;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.button-0:hover, 
+.button-0:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-0:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+	
+}
+#logout{
+width:110px;
+text-align:center;
+}
+#log{
+width:110px;
+height:50px;
+text-align:center;
+padding-bottom:0px;
+border-radius:5px;
+}
+	</style>
+	<script>
+	$( document ).ready(function(){
+	$('.home').css({"color":"green"});
+	$(".button-collapse").sideNav();}) 
+
+    
+        
+	</script>
+
+	</head>
+<body>
+
+ <nav>
+    <div class="nav-wrapper navbar-fixed blue lighten-5">
+      <a href="#" class="brand-logo" id="logo"><img src= "as.png" alt="swarnim gupta" width="230px" height="200px" style ="margin-top:-20px;"> </img></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <section id="nav1">
+	  <ul class="right hide-on-med-and-down">
+	  <li style ="margin-left:-890px;"><a href="home.html" style="color:blue;" class="home">Home</a></li>
+        <li style ="margin-left:-720px;"><a href="reports.html" style="color:blue;">Reports</a></li>
+        <li style ="margin-left:-550px;"><a href="calendar.html"  style="color:blue;">Calendar</a></li>
+        <li style ="margin-left:-380px;"><a href="pinned.html"style="color:blue;">Pinned</a></li>
+        <li style ="margin-left:-210px;"><a href="lb.html" style="color:blue;">Leaderboard </a></li>
+		<li style ="margin-top:30px;"><a class="waves-effect waves-light btn" id="logout" href="loginpage.html">LOGOUT</a></li>
+		<label  for="logout" style ="margin-right:5px;width:130px; href="loginpage.html" >Signed in as :<span>swarnim</span></label>
+      </ul>
+	    </section>
+      <ul class="side-nav" id="mobile-demo">
+	   <li><span style="font-size:20px;">&nbsp;&nbsp;swarnim</span></li>
+	   <li><a href="C:\Users\Swarnim\Documents\materialize\home.html"style ="width:235px;" class="home">Home</a></li>
+        <li><a href="C:\Users\Swarnim\Documents\materialize\reports.html" style ="width:235px;">Reports</a></li>
+        <li><a href="C:\Users\Swarnim\Documents\materialize\calendar.html" style ="width:235px;">Calendar</a></li>
+        <li><a  style ="width:235px;" href="C:\Users\Swarnim\Documents\materialize\pinned.html">Pinned</a></li>
+        <li><a  style ="width:235px;" href="C:\Users\Swarnim\Documents\materialize\lb.html">Leaderboard</a></li>
+		<li ><a class="waves-effect waves-red btn-flat yellow " id="log" href="C:\Users\Swarnim\Documents\materialize\loginpage.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  </br></br>
+
+  <section id="info" class="container">
+  <h6><b>CURRENT TEST INFORMATION</b></h6>
+ <ul class="collapsible" id="col" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">Physics </div>
+      <div class="collapsible-body"><p>..1st 3 questios (1-3)...</br>........</br>........</br>........</br></br></p>
+    </li>
+    <li>
+      <div class="collapsible-header">Chemistry</div>
+      <div class="collapsible-body"><p>.........</br>...from 4 to 6.....</br>........</br>........</br></br></p></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Maths</div>
+      <div class="collapsible-body"><p>.........</br>.....from 7 to 9...</br>........</br>........</br></br></p></div>
+    </li>
+  </ul>
+      <div class="row">
+	  <div class="col s12">
+        <a href="taketest.html"  class="button-0" class="center-align">START TEST</a>
+		
+		</div>
+		</div>
+		</section>
+</body>
+</html>

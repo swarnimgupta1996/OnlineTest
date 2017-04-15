@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+          
+     
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	  <style>
+	   nav
+	{
+	height:130px;
+	font-family: 'Pacifico', cursive;
+	font-size: 120px;
+	position:fixed;
+	z-index:1
+	}
+	#nav1
+	{text-align:center;
+	}
+	span{
+	color:red;
+	}
+	li.itm a{
+	width:170px;
+	color:blue;}
+	#logout{
+width:110px;
+text-align:center;
+}
+#log{
+width:110px;
+height:50px;
+text-align:center;
+padding-bottom:0px;
+border-radius:5px;
+}
+ ul.one {
+    list-style-type: none;
+    margin: -30px 0 0 -20px;;
+    padding: 0;
+    width: 220px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+    border: 1px solid #555;
+	position:fixed;
+}
+
+li.item a {
+    display: block;
+    color: #000;
+    padding: 60px 46px;
+    text-decoration: none;
+}
+
+li.item {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li.item:last-child {
+    border-bottom: none;
+}
+
+li.item a.active {
+    background-color: grey;
+    color: white;
+}
+
+li.item a:hover:not(.active) {
+    background-color: grey;
+    color: white;
+}
+       </style>
+	   <script>
+	   $( document ).ready(function(){
+$('.rep').css({"color":"green"});
+	$(".button-collapse").sideNav(); 
+	
+	var chart = new CanvasJS.Chart("chartContainer",
+	{
+		animationEnabled: true,
+		title:{
+			text: "Performance in Physics Chemistry Maths in Test1"
+		},
+		data: [
+		{
+			type: "column", //change type to bar, line, area, pie, etc
+			dataPoints: [
+				{ label: "Physics", y: 30 },
+				{ label: "Chemistry", y: 20 },
+				{ label: "Maths",  y: 50 },                                    
+				
+			]
+		}
+		]
+		});
+
+	chart.render();
+	var chart = new CanvasJS.Chart("chartContainer1",
+	{
+		animationEnabled: true,
+		title:{
+			text: "Performance in Physics Chemistry Maths in Test2"
+		},
+		data: [
+		{
+			type: "column", 
+			dataPoints: [
+				{ label: "Physics", y: 20 },
+				{ label: "Chemistry", y: 20 },
+				{ label: "Maths",  y: 60 },                                    
+				
+			]
+		}
+		]
+		});
+
+	chart.render();
+var chart = new CanvasJS.Chart("chartContainer2",
+	{
+		animationEnabled: true,
+		title:{
+			text: "Performance in Physics Chemistry Maths in Test3"
+		},
+		data: [
+		{
+			type: "column", 
+			dataPoints: [
+				{ label: "Physics", y: 40 },
+				{ label: "Chemistry", y: 20 },
+				{ label: "Maths",  y: 40 },                                    
+				
+			]
+		}
+		]
+		});
+
+	chart.render();
+
+	$("#testa").click(function(){
+         $("#testa").addClass("active");
+ $("#testb").removeClass("active");
+ $("#testc").removeClass("active");
+           $( 'html,body').animate({
+        scrollTop: $("#chartContainer").offset().top-($('#nv').outerHeight()+50)
+    }, 800);
+	
+	});
+$("#testb").click(function(){
+          $("#testb").addClass("active");
+ $("#testa").removeClass("active");
+ $("#testc").removeClass("active");
+           $( 'html,body').animate({
+        scrollTop: $("#chartContainer1").offset().top-($('#nv').outerHeight()+150)
+    }, 800);
+	
+	});
+	$("#testc").click(function(){
+          $("#testc").addClass("active");
+ $("#testa").removeClass("active");
+ $("#testb").removeClass("active");
+           $( 'html,body').animate({
+        scrollTop: $("#chartContainer2").offset().top-($('#nv').outerHeight()+150)
+    }, 800);
+
+	}); 
+	
+	
+	
+	
+	
+	});
+	   </script>
+	   <body>
+	   <nav>
+    <div class="nav-wrapper navbar-fixed blue lighten-5" id="nv">
+      <a href="#" class="brand-logo" id="logo"><img src= "as.png" alt="logo" width="230px" height="200px" style ="margin-top:-20px;"> </img></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <section id="nav1">
+	  <ul class="right hide-on-med-and-down">
+	    <li class="itm" style ="margin-left:-890px;"><a href="home.html" class="home" style="color:blue;">Home</a></li>
+        <li class="itm" style ="margin-left:-720px;"><a href="reports.html" class="rep"style="color:blue;" class="pin">Reports</a></li>
+        <li class="itm" style ="margin-left:-550px;"><a href="calendar.html" class="cal" style="color:blue;" > Calendar</a></li>
+        <li class="itm" style ="margin-left:-380px;"><a href="pinned.html" class="pin" style="color:blue;">Pinned</a></li>
+        <li class="itm" style ="margin-left:-210px;"><a href="lb.html" class="lb" style="color:blue;">Leaderboard </a></li>
+		<li style ="margin-top:30px;"><a class="waves-effect waves-light btn" id="logout" href="loginpage.html">LOGOUT</a></li>
+		<label  for="logout" style ="margin-right:5px;width:130px;" >Signed in as :<span>swarnim</span></label>
+      </ul>
+	    </section>
+      <ul class="side-nav" id="mobile-demo">
+	   <li class="itm"><span style="font-size:20px;">&nbsp;&nbsp;swarnim</span></li>
+	   <li class="itm"><a href="home.html" style ="width:235px;" class="home">Home</a></li>
+        <li class="itm"><a href="reports.html" style ="width:235px;" class="rep">Reports</a></li>
+        <li class="itm"><a href="calendar.html" style ="width:235px;" class="cal">Calendar</a></li>
+        <li class="itm"><a href="pinned.html" style ="width:235px;" class="pin">Pinned</a></li>
+        <li class="itm"><a  href="lb.html" style ="width:235px;" class="lb" >Leaderboard</a></li>
+		<li ><a class="waves-effect waves-red btn-flat yellow " id="log" href="loginpage.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  </br></br>
+  
+  <div class="container">
+
+
+	  <ul class="one">
+  <li class="item"><a class="active" id="testa">Test A</a></li>
+  <li class="item"><a id="testb">Test B </a></li>
+  <li class="item"><a id="testc">Test C</a></li>
+   </ul>
+   <div id="chartContainer" style="height: 300px; width: 70%;margin-left:300px;margin-top:200px;z-index:2;"></div>  </br></br></br>
+    <div id="chartContainer1" style="height: 300px; width: 70%;margin-left:300px;margin-top:300px;"></div>
+   </br></br></br>
+    <div id="chartContainer2" style="height: 300px; width: 70%;margin-left:300px;margin-top:300px;"></div>
+   </div>
+    </br></br></br> </br></br></br> </br></br></br> </br></br></br> </br></br></br> </br></br></br>
+	 </br></br></br> </br></br></br> </br></br></br> </br></br></b
+	  </body>
+	  </html>
